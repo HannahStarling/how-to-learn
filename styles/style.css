@@ -7,11 +7,7 @@
   margin: 0 auto;
   /* выше для экранов больше 1600px отцентрировали весь контент */
   font-family: "Helvetica Neue", Arial, sans-serif;
-  margin: 0;
-  padding: 0;
 }
-
-/* HEADER */
 
 /* LOGO */
 .logo {
@@ -19,10 +15,13 @@
   height: 32px;
 }
 
+/* HEADER */
+
 .logo_place_header {
   position: absolute;
   top: 30px;
   left: 64px;
+  z-index: 2;
 }
 
 .header {
@@ -41,19 +40,16 @@
 }
 
 .header__title {
-  margin: 0;
-  padding: 0;
-  margin-left: 64px;
+  margin: 0 0 0 64px;
   width: 730px;
   line-height: 96px;
   font-size: 102px;
   font-weight: bold;
-  z-index: 1;
+  z-index: 2;
 }
 
 .header__subtitle {
   margin: 0;
-  padding: 0;
   position: absolute;
   bottom: 30px;
   left: 64px;
@@ -61,6 +57,7 @@
   line-height: 25px;
   font-size: 18px;
   font-weight: normal;
+  z-index: 2;
 }
 
 .header__link {
@@ -74,11 +71,13 @@
   right: 0;
   width: 765px;
   height: 608px;
+  z-index: 1;
 }
 
 /* ниже мы привели пример двух селекторов, чтобы вы вспомнили запись элемента */
 .header__square-pic {
   position: absolute;
+  background: #2f80ed;
   top: 64px;
   right: 0;
   height: 568px;
@@ -87,6 +86,98 @@
 
 /* _____ MAIN CONTENT _____ */
 
+/* description */
+
+.description {
+  display: flex;
+  justify-content: center;
+}
+
+.two-columns {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  padding: 100px 0 0;
+}
+
+.two-columns__brief {
+  margin: 0;
+  width: 175px;
+  line-height: 1.2;
+  font-size: 18px;
+  font-weight: normal;
+  color: #2f80ed;
+}
+
+.two-columns__main-text {
+  width: 80%;
+  min-width: 784px;
+}
+
+.two-columns__paragraph {
+  margin: 0 0 30px;
+  line-height: 34px;
+  font-size: 24px;
+  font-weight: normal;
+}
+
+.two-columns__paragraph:last-of-type {
+  margin-bottom: 0;
+}
+
+.two-columns__span-accent {
+  font-weight: bold;
+}
+
+/* digits */
+
+.digits {
+  padding: 100px 0 100px;
+}
+.section-title {
+  text-align: center;
+  margin: 0 auto 20px;
+  width: 60%;
+  line-height: 1.15;
+  font-size: 60px;
+}
+.section-subtitle {
+  text-align: center;
+  margin: 0 auto;
+  width: 60%;
+  line-height: 34px;
+  font-size: 24px;
+}
+.table {
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 1100px;
+  margin: 0 auto;
+}
+.table__cell {
+  margin: 60px 0 0 0;
+  width: 250px;
+}
+.table__heading {
+  margin: 0 0 20px;
+  line-height: 1.15;
+  font-size: 24px;
+  font-weight: bold;
+}
+.table__text {
+  margin: 0 0 20px;
+  line-height: 1.2;
+  font-size: 18px;
+  font-weight: normal;
+}
+
+.table__text:last-of-type {
+  margin-bottom: 0;
+}
+
 /* feynman */
 .feynman {
   position: relative;
@@ -94,6 +185,32 @@
   background: #f1f1f1 url(../images/feynman.png) no-repeat bottom 0 left 0;
   background-size: 876px 637px;
   padding: 100px 0 0;
+}
+
+.feynman__title {
+  margin: 0 auto 70px;
+  width: 648px;
+  line-height: 1.15;
+  font-size: 120px;
+  font-weight: bold;
+  text-align: center;
+}
+.feynman__subtitle {
+  text-align: center;
+  margin: 0;
+  line-height: 51px;
+  font-size: 36px;
+  font-weight: normal;
+}
+.feynman__link {
+  position: absolute;
+  top: 50%;
+  right: 48px;
+  text-decoration: none;
+  color: #2f80ed;
+  line-height: 51px;
+  font-size: 36px;
+  font-weight: normal;
 }
 
 /* kaufman */
@@ -105,19 +222,24 @@
   overflow: hidden;
 }
 
-/*Позиционируйте элемент абсолютно.
-Сместите его за правую границу блока на 210 пикселей,
-в этом вам помогут отрицательные величины.
-Чтобы треугольник не выходил за границу блока,
-установите всему блоку kaufman свойство overflow: hidden;
-подробнее о нем
-— во втором спринте*/
 .kaufman__triangle {
+  width: 877px;
+  height: 877px;
   position: absolute;
   top: 0;
   right: -210px;
-  width: 877px;
-  height: 877px;
+  background: url(../images/kaufman-triangle.svg) 100% 100% no-repeat;
+  background-size: contain;
+}
+
+.section-title_theme_dark {
+  position: relative;
+  z-index: 1;
+}
+
+.section-subtitle_theme_dark {
+  position: relative;
+  z-index: 1;
 }
 
 /* и элемента с модификатором вида ключ-значение */
@@ -126,4 +248,70 @@
   color: white;
   margin-right: 0;
   margin-top: 80px;
+  z-index: 1;
+}
+
+/* ______ FOOTER ______ */
+
+.footer {
+  display: flex;
+  padding: 60px 0 40px;
+  min-height: 350px;
+  color: white;
+  background: #1f1f1f;
+}
+
+.footer__columns {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 90%;
+}
+.footer__column_content_copyright {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-basis: 711px;
+}
+
+.logo_place_footer {
+  height: 35px;
+}
+
+.footer__author {
+  margin: 18px 0;
+  line-height: 25px;
+  font-size: 18px;
+  font-weight: normal;
+}
+
+.footer__column-heading {
+  margin: 0 0 20px;
+  line-height: 30px;
+  font-size: 18px;
+  font-weight: bold;
+}
+.footer__column-links {
+  margin: 0 0 16px;
+  padding: 0;
+  list-style: none;
+}
+.footer__column-link {
+  line-height: 30px;
+  font-size: 18px;
+  font-weight: normal;
+  text-decoration: none;
+  color: white;
+}
+.footer__column_content_info {
+  line-height: 30px;
+  font-size: 18px;
+  font-weight: normal;
+  text-decoration: none;
+  color: white;
+}
+.footer__column-icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 10px;
 }
