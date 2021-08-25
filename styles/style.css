@@ -181,7 +181,7 @@
 /* feynman */
 .feynman {
   position: relative;
-  height: 890px;
+  min-height: 890px;
   background: #f1f1f1 url(../images/feynman.png) no-repeat bottom 0 left 0;
   background-size: 876px 637px;
   padding: 100px 0 0;
@@ -229,7 +229,7 @@
   top: 0;
   right: -210px;
   background: url(../images/kaufman-triangle.svg) 100% 100% no-repeat;
-  background-size: contain;
+  background-size: 100%;
 }
 
 .section-title_theme_dark {
