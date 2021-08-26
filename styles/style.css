@@ -61,6 +61,10 @@
   color: #2f80ed;
 }
 
+.header__link:hover {
+  text-decoration: underline;
+}
+
 .header__main-illustration {
   position: absolute;
   bottom: 0;
@@ -211,6 +215,10 @@
   font-weight: normal;
 }
 
+.feynman__link:hover {
+  text-decoration: underline;
+}
+
 /* kaufman */
 .kaufman {
   position: relative;
@@ -302,6 +310,11 @@
   text-decoration: none;
   color: white;
 }
+
+.footer__column-link:hover {
+  text-decoration: underline;
+}
+
 .footer__column_content_info {
   line-height: 30px;
   font-size: 18px;
