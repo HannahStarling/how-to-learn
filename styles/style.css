@@ -167,7 +167,7 @@
   width: 920px;
 }
 
-.cards-image {
+.cards__image {
   width: 160px;
   height: 160px;
   padding: 0 40px;
@@ -175,13 +175,13 @@
   border-radius: 50%;
 }
 
-.cards-title {
+.cards__title {
   margin: 0 0 16px;
   line-height: 1.15;
   font-size: 24px;
 }
 
-.cards-description {
+.cards__description {
   margin: 0;
   line-height: 23px;
   font-size: 18px;
